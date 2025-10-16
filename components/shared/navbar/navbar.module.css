@@ -1,6 +1,6 @@
 .navbar {
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    gap: var(--stardard);
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: var(--stardard);
 }

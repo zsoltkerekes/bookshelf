@@ -4,8 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start"
+    "build": "next build",
+    "start": "next start",
+    "prepare": "husky",
+    "prettier:format": "prettier . --write",
+    "prettier:check": "prettier . --check",
+    "lint": "eslint .",
+    "vitest:watch": "vitest --coverage",
+    "vitest:ui": "vitest --ui --coverage",
+    "vitest:cli": "vitest run --coverage"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.27.1",
@@ -17,10 +24,28 @@
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.37.0",
+    "@tailwindcss/postcss": "^4",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.0",
     "@types/node": "^20",
     "@types/react": "^19",
-
+    "@vitejs/plugin-react": "^5.0.4",
+    "@vitest/coverage-istanbul": "^3.2.4",
+    "@vitest/ui": "^3.2.4",
+    "eslint": "^9.37.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.4.0",
+    "husky": "^9.1.7",
+    "jsdom": "^27.0.0",
+    "lint-staged": "^16.2.4",
+    "prettier": "3.6.2",
     "typescript": "^5",
-    "@tailwindcss/postcss": "^4"
+    "typescript-eslint": "^8.46.1",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.2.4"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
