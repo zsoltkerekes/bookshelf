@@ -10,6 +10,7 @@
     "prettier:format": "prettier . --write",
     "prettier:check": "prettier . --check",
     "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
     "vitest:watch": "vitest --coverage",
     "vitest:ui": "vitest --ui --coverage",
     "vitest:cli": "vitest run --coverage"
