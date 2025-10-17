@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bookshelf",
-  description: "Bookshelf is a platform for managing your books",
+  title: "Bookshelf at Home",
+  description: "Bookshelf at Home - a platform for managing your books",
 };
 
 export default function RootLayout({

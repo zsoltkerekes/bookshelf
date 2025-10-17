@@ -1,3 +1,5 @@
+import { BookTeaser } from "@/features/book-teaser/BookTeaser";
+
 export default function Home() {
-  return <h1>Bookshelf</h1>;
+  return <BookTeaser />;
 }

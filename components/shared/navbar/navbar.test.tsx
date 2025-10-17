@@ -1,15 +1,15 @@
 import { Navbar } from "./navbar";
-import { describe, test, vi, expect } from "vitest";
+import { describe, test, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-
-vi.mock("@/components/ui/color-mode", () => ({
-  ColorModeButton: () => <p>ColorModeButton</p>,
-}));
+import { Wrapper } from "@/utils/vitest/wrapper";
 
 describe("Navbar", () => {
   test("should render correctly", () => {
-    render(<Navbar />);
+    render(<Navbar />, { wrapper: Wrapper });
     expect(screen.getByRole("navigation")).toBeTruthy();
-    expect(screen.getByText("ColorModeButton")).toBeTruthy();
+    expect(
+      screen.getByRole("button", { name: "Toggle color mode" }),
+    ).toBeTruthy();
+    expect(screen.getAllByRole("heading")).toBeTruthy();
   });
 });

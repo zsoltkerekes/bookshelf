@@ -7,3 +7,7 @@
 body {
   padding: var(--stardard);
 }
+
+main {
+  padding: var(--big) 0 var(--big) 0;
+}
