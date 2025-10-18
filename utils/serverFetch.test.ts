@@ -31,10 +31,10 @@ describe("serverFetch", () => {
         "Content-Type"
       ],
     ).toBe("application/json");
-    expect((calledOptions as { cache: string }).cache).toBe("force-cache");
-    expect((calledOptions as { next: { revalidate: 60 } }).next).toEqual({
-      revalidate: 60,
-    });
+    expect((calledOptions as { cache: string }).cache).toBe("no-store");
+    expect(
+      (calledOptions as { next: { revalidate: number } | undefined }).next,
+    ).toEqual(undefined);
   });
 
   test("propagates fetch/json errors as thrown exceptions", async () => {

@@ -9,13 +9,11 @@ describe("OpenLibraryBook", () => {
     const book = makeBook();
     render(<OpenLibraryBook book={book} />, { wrapper: Wrapper });
 
-    // Author and title
     expect(screen.getByText("J. K. Rowling, Nemesis")).toBeTruthy();
     expect(
       screen.getByText("Harry Potter and the Order of the Phoenix"),
     ).toBeTruthy();
 
-    // Image from cover_edition_key has priority
     const img: HTMLImageElement = screen.getByRole("img", {
       name: "Harry Potter and the Order of the Phoenix",
     });
@@ -23,11 +21,9 @@ describe("OpenLibraryBook", () => {
       "https://covers.openlibrary.org/b/olid/OL25662116M.jpg",
     );
 
-    // Published year
     expect(screen.getByText(/Published:/)).toBeTruthy();
     expect(screen.getByText("2003")).toBeTruthy();
 
-    // Languages
     expect(screen.getByText(/Languages:/)).toBeTruthy();
     expect(screen.getByText(/hun, eng, kor/)).toBeTruthy();
   });

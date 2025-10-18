@@ -1,14 +1,19 @@
 import { OpenLibraryBook } from "@/components/shared/open-library-book/OpenLibraryBook";
-import { searchForPopularBooks } from "./repository/search-for-popular-books";
 import { Book } from "@/interfaces/open-library/book";
 import { Stack, Text } from "@chakra-ui/react";
+import { olBookSearch } from "./repository/search";
 
-export const BookTeaser = async () => {
-  const { popularBooks, error } = await searchForPopularBooks();
+export const OpenLibrarySearch = async ({ query }: { query?: string }) => {
+  if (!query) {
+    return null;
+  }
+
+  const { books, error } = await olBookSearch(query);
+
   return (
     <>
       <Stack gap="8" direction="row" wrap="wrap" justifyContent="center">
-        {popularBooks?.docs.map((book: Book) => (
+        {books?.docs.map((book: Book) => (
           <OpenLibraryBook book={book} key={book.key} />
         ))}
       </Stack>

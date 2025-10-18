@@ -1,0 +1,16 @@
+.lazyLink {
+  display: flex;
+  gap: var(--small);
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  color: var(--chakra-colors-color-palette-fg);
+}
+
+.lazyLink:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--chakra-colors-gray-emphasized);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}

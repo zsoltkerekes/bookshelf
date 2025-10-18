@@ -33,7 +33,6 @@ describe("BookTeaser", () => {
 
     expect(screen.getByText("Title 1")).toBeTruthy();
     expect(screen.getByText("Title 2")).toBeTruthy();
-    // two cards with images
     expect(screen.getAllByRole("img").length).toBeGreaterThanOrEqual(2);
   });
 
@@ -47,6 +46,8 @@ describe("BookTeaser", () => {
 
     const ui = await BookTeaser();
     render(ui, { wrapper: Wrapper });
-    expect(screen.getByText(/There was an error, try again!/)).toBeTruthy();
+    expect(
+      screen.getByText(/There was an error, try again later!/),
+    ).toBeTruthy();
   });
 });

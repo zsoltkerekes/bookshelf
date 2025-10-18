@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   justify-content: end;
-  gap: var(--stardard);
+  gap: var(--big);
   align-items: center;
   padding: var(--big);
 }

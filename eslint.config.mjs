@@ -14,7 +14,7 @@ export default defineConfig([
   tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   globalIgnores([
-    "node_modules/*", // ignore its content
+    "node_modules/*",
     ".husky/*",
     ".next/*",
     "public/*",
@@ -24,6 +24,7 @@ export default defineConfig([
   {
     rules: {
       "react/react-in-jsx-scope": "off",
+      "@typescript-eslint/no-unsafe-function-type": "off",
     },
   },
 ]);

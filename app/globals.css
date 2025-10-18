@@ -1,13 +1,13 @@
 :root {
   --small: 4px;
-  --stardard: 8px;
+  --standard: 8px;
   --big: 16px;
 }
 
 body {
-  padding: var(--stardard);
+  padding: var(--standard);
 }
 
 main {
-  padding: var(--big) 0 var(--big) 0;
+  padding: var(--big);
 }

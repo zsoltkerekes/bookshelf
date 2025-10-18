@@ -1,4 +1,3 @@
-// vitest-setup.js (can be any file name)
 import { vi } from "vitest";
 import React from "react";
 
@@ -26,7 +25,6 @@ if (globalThis.window !== undefined && !("matchMedia" in globalThis.window)) {
   });
 }
 
-// Mock Next.js Image to a plain img for tests
 vi.mock("next/image", () => ({
   default: (props) => React.createElement("img", { ...props }),
 }));

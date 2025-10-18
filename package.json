@@ -13,7 +13,8 @@
     "typecheck": "tsc --noEmit",
     "vitest:watch": "vitest --coverage",
     "vitest:ui": "vitest --ui --coverage",
-    "vitest:cli": "vitest run --coverage"
+    "vitest:cli": "vitest run --coverage",
+    "local:check": "npm run prettier:check && npm run lint && npm run typecheck && npm run vitest:cli"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.27.1",
