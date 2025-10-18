@@ -28,7 +28,7 @@ describe("search", () => {
     expect(result.error).toBeNull();
     expect(result.books).toBe(payload);
     expect(serverFetch).toHaveBeenCalledWith({
-      url: "https://openlibrary.org/search.json?q=test&page=1&sort=currently_reading",
+      url: "https://openlibrary.org/search.json?q=test&page=1&sort=new",
     });
   });
 
